@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="container selection" id="content">
+    <h1 class="selection--primary-text">Customize your quiz</h1>
+    <form id="quiz-options" class="selection--form" onsubmit="startQuiz(event)">
+      <label for="category" class="selection--label">
+        Category
+        <select id="category" name="category" class="selection--select" required>
+          <option value="18">Computers</option>
+          <option value="9">General Knowledge</option>
+          <option value="17">Science &amp; Nature</option>
+          <option value="19">Mathematics</option>
+          <option value="21">Sports</option>
+          <option value="28">Vechiles</option>
+          <option value="10">Books</option>
+          <option value="11">Film</option>
+          <option value="12">Music</option>
+        </select>
+      </label>
+      <label for="difficulty" class="selection--label">
+        Difficulty
+        <select id="difficulty" name="difficulty" class="selection--select" required>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <label for="number" class="selection--label">
+        Number
+        <select id="number" name="number" class="selection--select" required>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+      <input type="submit" value="Start" class="button selection--action">
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
